@@ -58,7 +58,7 @@ fun AccessibilityTestApp() {
                 title = {
                     Text(
                         text = currentDestination,
-                        modifier = Modifier.semantics() { invisibleToUser() }
+                        modifier = Modifier.semantics { invisibleToUser() }
                     )
                 },
                 navigationIcon = {
