@@ -62,8 +62,15 @@ fun AccessibilityTestApp() {
                     )
                 },
                 navigationIcon = {
-                    Text(
-                        text = "Back"
+                    Button(
+                        content = { Text("Back") },
+                        onClick = {
+                            when(currentDestination) {
+                                "Home" ->  currentDestination = "Profile"
+                                "Profile" ->  currentDestination = "Favorites"
+                                "Favorites" ->  currentDestination = "Home"
+                            }
+                        },
                     )
                 }
             )
